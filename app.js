@@ -10,7 +10,7 @@ function adicionarAmigo() {
     } else {
         alert("Por favor, insira um nome.");
     }
-    
+
     atualizarLista();
     limparCampo();
 }
@@ -30,4 +30,17 @@ function atualizarLista() {
         lista.appendChild(item);
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        console.log("A lista de amigos está vazia!");
+        return;
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    document.getElementById("resultado").innerHTML = `Amigo sorteado: ${amigoSorteado}`;
+}
+
 
