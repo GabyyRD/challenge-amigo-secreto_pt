@@ -41,6 +41,9 @@ function sortearAmigo() {
     let amigoSorteado = amigos[indiceAleatorio];
 
     document.getElementById("resultado").innerHTML = `Amigo sorteado: ${amigoSorteado}`;
+
+    let limparLista = document.getElementById("listaAmigos");
+    limparLista.innerHTML = "";
 }
 
 
