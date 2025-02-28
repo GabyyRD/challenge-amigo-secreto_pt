@@ -20,9 +20,13 @@ function limparCampo() {
     entrada.value = '';
 }
 
+function limparLista() {
+    let limparLista = document.getElementById("listaAmigos");
+    limparLista.innerHTML = "";
+}
+
 function atualizarLista() {
-    let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = ""; 
+    limparLista();
 
     for (let i = 0; i < amigos.length; i++) {
         let item = document.createElement("li");
@@ -41,9 +45,7 @@ function sortearAmigo() {
     let amigoSorteado = amigos[indiceAleatorio];
 
     document.getElementById("resultado").innerHTML = `Amigo sorteado: ${amigoSorteado}`;
-
-    let limparLista = document.getElementById("listaAmigos");
-    limparLista.innerHTML = "";
+    limparLista();
 }
 
 
