@@ -5,11 +5,11 @@ let amigos = []
 function adicionarAmigo() {
     let entrada = document.querySelector('input').value;
 
-    if (entrada.trim() !== "") {
-        amigos.push(entrada);
-    } else {
+    if (!entrada) {
         alert("Por favor, insira um nome.");
+        return;
     }
+    amigos.push(entrada);
 
     atualizarLista();
     limparCampo();
